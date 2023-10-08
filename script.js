@@ -1,10 +1,10 @@
 let playlist = [
-    { id: 0, SongName: "Kuley Kuley", SongPath: "songs/Kuley_Kuley_song.mp3", ImagePath: "images/kks.webp", SongDuration: "03:29" },
-    { id: 1, SongName: "Man Mera", SongPath: "songs/Mann_Mera_song.mp3", ImagePath: "images/man_mera.jpg", SongDuration: "03:18" },
-    { id: 2, SongName: "Dilawara", SongPath: "songs/Dilawara_song.mp3", ImagePath: "images/Dilawara.jpg", SongDuration: "04:10" },
-    { id: 3, SongName: "Main Agar Kahoon", SongPath: "songs/Main Agar Kahoon_song.mp3", ImagePath: "images/Main_Agar_Kahoon.jpg", SongDuration: "05:12" },
-    { id: 4, SongName: "Lahore", SongPath: "songs/Lahore_song.mp3", ImagePath: "images/Lahore.jpg", SongDuration: "03:17" },
-    { id: 5, SongName: "Bijlee Bijlee", SongPath: "songs/Bijlee_Bijlee_song.mp3", ImagePath: "images/Bijlee_Bijlee.jpg", SongDuration: "02:48" },
+    { id: 0, SongName: "Kuley Kuley", SongPath: "Kuley_Kuley_song.mp3", ImagePath: "kks.webp", SongDuration: "03:29" },
+    { id: 1, SongName: "Man Mera", SongPath: "Mann_Mera_song.mp3", ImagePath: "man_mera.jpg", SongDuration: "03:18" },
+    { id: 2, SongName: "Dilawara", SongPath: "Dilawara_song.mp3", ImagePath: "Dilawara.jpg", SongDuration: "04:10" },
+    { id: 3, SongName: "Main Agar Kahoon", SongPath: "Main Agar Kahoon_song.mp3", ImagePath: "Main_Agar_Kahoon.jpg", SongDuration: "05:12" },
+    { id: 4, SongName: "Lahore", SongPath: "Lahore_song.mp3", ImagePath: "Lahore.jpg", SongDuration: "03:17" },
+    { id: 5, SongName: "Bijlee Bijlee", SongPath: "Bijlee_Bijlee_song.mp3", ImagePath: "Bijlee_Bijlee.jpg", SongDuration: "02:48" },
 ]
 
 let song = Array.from(document.getElementsByClassName('song'));
