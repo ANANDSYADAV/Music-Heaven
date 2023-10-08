@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600;800&family=Oswald:wght@700&family=Young+Serif&display=swap');
+
+body {
+    background-color: beige;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 45px;
+    background-color: black;
+    color: white;
+    font-size: 23px;
+    align-items: center;
+    font-weight: 900;
+}
+
+nav img {
+    width: 42px;
+    height: 42px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px;
+}
+
+.container {
+    min-height: 92vh;
+    width: 70vw;
+    margin: 10px auto;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: black;
+    object-fit: cover;
+    background: url('back.jpg');
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+    color: white;
+    background-color: black;
+}
+
+.bottom input {
+    padding: 0;
+    width: 98vw;
+    background-color: red;
+    cursor: pointer;
+}
+
+#gifholder {
+    position: absolute;
+    margin: 0 40px;
+    right: 0;
+}
+
+#gif {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    opacity: 0;
+}
+
+.bottom img {
+    width: 30px;
+    height: 25px;
+    margin: 10px 16px;
+    padding: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.bottom div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom span {
+    margin: auto 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.titleInfo {
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.titleInfo img {
+    height: 35px;
+    width: 35px;
+    border-radius: 15px;
+    margin-right: 0;
+}
+
+.bottom span .pngs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.bottom #btns {
+    background: white;
+}
+
+.bottom img:hover {
+    opacity: 0.7;
+}
+
+.container .songList {
+    color: black;
+    width: 100%;
+    margin-left: auto;
+    padding-left: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Young Serif', serif;
+    justify-content: space-around;
+    height: auto;
+}
+
+.song {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+.songList span {
+    margin: 5px 3px;
+}
+
+.timespan {
+    width: 20%;
+}
+
+.songList img {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.play {
+    right: 10px;
+    margin-right: 0;
+    width: 20%;
+    cursor: pointer;
+}
+
+.songname {
+    width: 90%;
+}
+
+@media screen and (width <=900px) {
+    .container {
+        background: url('backtab.jpg');
+    }
+
+    .songList {
+        font-size: 20px;
+    }
+
+    .songList img {
+        width: 40px;
+        height: 40px;
+        border-radius: 25px;
+        padding: 4px 8px;
+    }
+
+    span .titleInfotext {
+        display: none;
+    }
+
+    .bottom input {
+        width: 97vw;
+    }
+}
+
+@media screen and (width <=550px) {
+    .container {
+        background: url('backmob.jpg');
+    }
+
+    nav {
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0 150px;
+    }
+
+    nav ul li {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    nav img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .songList {
+        font-size: 15px;
+    }
+
+    .song {
+        width: 100%;
+    }
+
+    .songList img {
+        width: 40px;
+        height: 40px;
+        border-radius: 25px;
+        padding: 2px 5px;
+    }
+
+    .bottom input {
+        width: 96vw;
+    }
+
+    #gifholder {
+        width: 50px;
+    }
+}
+
+@media screen and (width <=450px) {
+    nav ul {
+        margin: 0 100px;
+    }
+
+    .song {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    #gifholder {
+        width: 30px;
+    }
+}
+
+@media screen and (width <=400px) {
+    nav {
+        font-size: 30px;
+    }
+
+    nav img {
+        height: 60px;
+        width: 60px;
+    }
+
+    nav ul {
+        margin: 0 50px;
+    }
+
+    nav ul li {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .song {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .bottom input {
+        width: 95vw;
+    }
+
+    #gifholder {
+        width: 20px;
+        margin: 0 20px;
+    }
+}
+
+@media screen and (width <=350px) {
+    nav {
+        font-size: 25px;
+    }
+
+    nav img {
+        height: 50px;
+        width: 50px;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav ul li {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .container {
+        width: 70vw;
+    }
+
+    .song {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .song img {
+        height: 40px;
+        width: 30px;
+    }
+
+    .bottom input {
+        width: 94vw;
+    }
+
+    .bottom img {
+        padding: 0;
+        margin: 10px 5px;
+    }
+
+    .bottom #songplaying {
+        margin-left: 8px;
+        width: 35px;
+        height: auto;
+    }
+
+    #gifholder {
+        width: 20px;
+        margin: 0 15px;
+    }
+}
+
+@media screen and (width <=300px) {
+    .song {
+        font-size: 12px;
+    }
+
+    .song img {
+        width: 25px;
+        height: 30px;
+    }
+
+    .bottom input {
+        width: 93vw;
+    }
+}

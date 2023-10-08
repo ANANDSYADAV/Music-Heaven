@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHeaven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <img src="Applogo.jpeg" alt="Applogo"> MusicHeaven
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <div class="container">  
+        <div class="songList">
+            <div class="song">
+                <img alt="Kuley_Kuley_song">
+                <span class="songname">Kuley Kuley</span>
+                <span class="timespan">03:29</span>
+                <img id="0" alt="clicktoplay" class="play">
+            </div>
+            <div class="song">
+                <img alt="man_mera_song">
+                <span class="songname">Man Mera</span>
+                <span class="timespan">03:18</span>
+                <img id="1" alt="clicktoplay" class="play">
+            </div>
+            <div class="song" >
+                <img alt="Dilawara_song">
+                <span class="songname">Dilawara</span>
+                <span class="timespan">04:10</span>
+                <img id="2" alt="clicktoplay" class="play">
+            </div>
+            <div class="song">
+                <img alt="Main_Agar_Kahoon_song">
+                <span class="songname">Main Agar Kahoon</span>
+                <span class="timespan">05:12</span>
+                <img id="3" alt="clicktoplay" class="play">
+            </div>
+            <div class="song">
+                <img alt="Lahore_song">
+                <span class="songname">Lahore</span>
+                <span class="timespan">03:17</span>
+                <img id="4" alt="clicktoplay" class="play">
+            </div>
+            <div class="song">
+                <img alt="Bijlee_Bijlee_song">
+                <span class="songname">Bijlee Bijlee</span>
+                <span class="timespan">02:48</span>
+                <img id="5" alt="clicktoplay" class="play">
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="Musiclength" id="progressbar" min="0" max="100" value="0">
+        <div>
+            <span class="titleInfo">
+                <img src="default_track.jpg" alt="default_track_image" id="songplaying">
+                <span class="titleInfotext">My Tunes</span>
+            </span>
+            <span id="btns" class="pngs">
+                <img src="backward_play.png" alt="backward" id="prevsong">
+                <img src="paused.png" alt="paused" id="mainplay">
+                <img src="forward_play.png" alt="forward" id="nextsong">
+            </span>
+            <span id="gifholder">
+                <img src="gif.gif" alt="gif" id="gif">
+            </span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
