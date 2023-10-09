@@ -5,6 +5,10 @@ let playlist = [
     { id: 3, SongName: "Main Agar Kahoon", SongPath: "Main Agar Kahoon_song.mp3", ImagePath: "Main_Agar_Kahoon.jpg", SongDuration: "05:12" },
     { id: 4, SongName: "Lahore", SongPath: "Lahore_song.mp3", ImagePath: "Lahore.jpg", SongDuration: "03:17" },
     { id: 5, SongName: "Bijlee Bijlee", SongPath: "Bijlee_Bijlee_song.mp3", ImagePath: "Bijlee_Bijlee.jpg", SongDuration: "02:48" },
+
+    { id: 6, SongName: "Blue Eyes", SongPath: "Blue Eyes_song.mp3", ImagePath: "Blue-Eyes.jpg", SongDuration: "03:41" },
+    { id: 7, SongName: "Lehanga", SongPath: "Lehenga_song.mp3", ImagePath: "Lehenga.jpg", SongDuration: "03:30" },
+    { id: 8, SongName: "Tum Hi Ho", SongPath: "Tum Hi Ho_song.mp3", ImagePath: "tum hi ho.jpg", SongDuration: "04:22" }
 ]
 
 let song = Array.from(document.getElementsByClassName('song'));
@@ -61,7 +65,6 @@ Array.from(document.getElementsByClassName('play')).forEach((element) => {
 let stat = 0;
 mainplay.addEventListener('click', (e) => {
     if (songElement.currentTime <= 0) {
-        // songElement.paused || 
         songElement.play();
         gif.style.opacity = 1;
         stat = 1;
@@ -103,7 +106,6 @@ prevsong.addEventListener('click', (e) => {
 
 let nextsong = document.getElementById('nextsong');
 nextsong.addEventListener('click', (e) => {
-
     if (songId == playlist.length - 1) {
         songId = playlist.length - 1;
     }
