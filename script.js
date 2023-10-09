@@ -7,7 +7,7 @@ let playlist = [
     { id: 5, SongName: "Bijlee Bijlee", SongPath: "Bijlee_Bijlee_song.mp3", ImagePath: "Bijlee_Bijlee.jpg", SongDuration: "02:48" },
 
     { id: 6, SongName: "Blue Eyes", SongPath: "Blue Eyes_song.mp3", ImagePath: "Blue-Eyes.jpg", SongDuration: "03:41" },
-    { id: 7, SongName: "Lehanga", SongPath: "Lehenga_song.mp3", ImagePath: "Lehenga.jpg", SongDuration: "03:30" },
+    { id: 7, SongName: "Lehanga", SongPath: "Lehenga_song.mp3", ImagePath: "lehenga.jpg", SongDuration: "03:30" },
     { id: 8, SongName: "Tum Hi Ho", SongPath: "Tum Hi Ho_song.mp3", ImagePath: "tum hi ho.jpg", SongDuration: "04:22" }
 ]
 
