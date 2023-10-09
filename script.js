@@ -5,7 +5,6 @@ let playlist = [
     { id: 3, SongName: "Main Agar Kahoon", SongPath: "Main Agar Kahoon_song.mp3", ImagePath: "Main_Agar_Kahoon.jpg", SongDuration: "05:12" },
     { id: 4, SongName: "Lahore", SongPath: "Lahore_song.mp3", ImagePath: "Lahore.jpg", SongDuration: "03:17" },
     { id: 5, SongName: "Bijlee Bijlee", SongPath: "Bijlee_Bijlee_song.mp3", ImagePath: "Bijlee_Bijlee.jpg", SongDuration: "02:48" },
-
     { id: 6, SongName: "Blue Eyes", SongPath: "Blue Eyes_song.mp3", ImagePath: "Blue-Eyes.jpg", SongDuration: "03:41" },
     { id: 7, SongName: "Lehanga", SongPath: "Lehenga_song.mp3", ImagePath: "lehenga.jpg", SongDuration: "03:30" },
     { id: 8, SongName: "Tum Hi Ho", SongPath: "Tum Hi Ho_song.mp3", ImagePath: "tum hi ho.jpg", SongDuration: "04:22" }
@@ -89,6 +88,7 @@ mainplay.addEventListener('click', (e) => {
 
 let prevsong = document.getElementById('prevsong');
 prevsong.addEventListener('click', (e) => {
+    document.getElementsByClassName('play')[songId].src = "black_play.jpg";
     if (songId == 0) {
         songId = 0;
     }
@@ -98,6 +98,7 @@ prevsong.addEventListener('click', (e) => {
     songElement.src = playlist[songId].SongPath;
     songElement.currentTime = 0;
     songElement.play();
+    document.getElementsByClassName('play')[songId].src = "black_pause.png";
     gif.style.opacity = 1;
     mainplay.src = "playing.png";
     songplaying.src = playlist[songId].ImagePath;
@@ -106,6 +107,7 @@ prevsong.addEventListener('click', (e) => {
 
 let nextsong = document.getElementById('nextsong');
 nextsong.addEventListener('click', (e) => {
+    document.getElementsByClassName('play')[songId].src = "black_play.jpg";
     if (songId == playlist.length - 1) {
         songId = playlist.length - 1;
     }
@@ -115,6 +117,7 @@ nextsong.addEventListener('click', (e) => {
     songElement.src = playlist[songId].SongPath;
     songElement.currentTime = 0;
     songElement.play();
+    document.getElementsByClassName('play')[songId].src = "black_pause.png";
     gif.style.opacity = 1;
     mainplay.src = "playing.png";
     songplaying.src = playlist[songId].ImagePath;
