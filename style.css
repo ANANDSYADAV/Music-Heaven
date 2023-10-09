@@ -121,7 +121,7 @@ nav ul li {
     height: 35px;
     width: 35px;
     border-radius: 15px;
-    margin-right: 0;
+    margin-right: 3px;
 }
 
 .bottom span .pngs {
@@ -185,6 +185,10 @@ nav ul li {
     margin-right: 0;
     width: 20%;
     cursor: pointer;
+}
+
+.play:hover {
+    opacity: 0.8;
 }
 
 .songname {
