@@ -124,4 +124,18 @@ nextsong.addEventListener('click', (e) => {
     titleInfotext.innerHTML = playlist[songId].SongName;
 })
 
-console.log(songId);
+songElement.addEventListener('ended', () => {
+    document.getElementsByClassName('play')[songId].src = "black_play.jpg";
+
+    if (songId < playlist.length - 1)
+        songId++;
+    else songId = 0;
+
+    songElement.src = playlist[songId].SongPath;
+    songElement.currentTime = 0;
+    songElement.play();
+    document.getElementsByClassName('play')[songId].src = "black_pause.png";
+    gif.style.opacity = 1;
+    songplaying.src = playlist[songId].ImagePath;
+    titleInfotext.innerHTML = playlist[songId].SongName;
+})
