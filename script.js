@@ -19,6 +19,7 @@ song.forEach((element, i) => {
     element.getElementsByTagName("img")[1].src = "black_play.jpg";
 })
 
+let songstatus = 0;
 let songId = 0;
 let songElement = new Audio(playlist[0].SongPath);
 let mainplay = document.getElementById('mainplay');
@@ -30,12 +31,12 @@ let progressbar = document.getElementById('progressbar');
 let gif = document.getElementById('gif');
 
 songElement.addEventListener('timeupdate', () => {
-    progress = parseInt((songElement.currentTime / songElement.duration) * 100);
+    progress = parseInt((songElement.currentTime / songElement.duration) * 1000000);
     progressbar.value = progress;
 })
 
 progressbar.addEventListener('change', () => {
-    songElement.currentTime = progressbar.value * songElement.duration / 100;
+    songElement.currentTime = progressbar.value * songElement.duration / 1000000;
 })
 
 const makeAllPlay = () => {
@@ -54,6 +55,7 @@ Array.from(document.getElementsByClassName('play')).forEach((element) => {
         songElement.src = playlist[index].SongPath;
         songElement.currentTime = 0;
         songElement.play();
+        songstatus = 1;
         gif.style.opacity = 1;
         mainplay.src = "playing.png";
         songplaying.src = playlist[index].ImagePath;
@@ -61,26 +63,25 @@ Array.from(document.getElementsByClassName('play')).forEach((element) => {
     })
 })
 
-let stat = 0;
 mainplay.addEventListener('click', (e) => {
     if (songElement.currentTime <= 0) {
         songElement.play();
         gif.style.opacity = 1;
-        stat = 1;
+        songstatus = 1;
         mainplay.src = "playing.png";
         songplaying.src = playlist[0].ImagePath;
         titleInfotext.innerHTML = playlist[0].SongName;
         document.getElementsByClassName('play')[0].src = "black_pause.png";
     }
-    else if (songElement.currentTime > 0 && stat == 0) {
+    else if (songElement.currentTime > 0 && songstatus == 0) {
         songElement.play();
+        songstatus = 1;
         mainplay.src = "playing.png";
         gif.style.opacity = 1;
-        stat = 1;
     }
     else {
         songElement.pause();
-        stat = 0;
+        songstatus = 0;
         gif.style.opacity = 0;
         mainplay.src = "paused.png";
     }
@@ -98,6 +99,7 @@ prevsong.addEventListener('click', (e) => {
     songElement.src = playlist[songId].SongPath;
     songElement.currentTime = 0;
     songElement.play();
+    songstatus = 1;
     document.getElementsByClassName('play')[songId].src = "black_pause.png";
     gif.style.opacity = 1;
     mainplay.src = "playing.png";
@@ -117,12 +119,15 @@ nextsong.addEventListener('click', (e) => {
     songElement.src = playlist[songId].SongPath;
     songElement.currentTime = 0;
     songElement.play();
+    songstatus = 1;
     document.getElementsByClassName('play')[songId].src = "black_pause.png";
     gif.style.opacity = 1;
     mainplay.src = "playing.png";
     songplaying.src = playlist[songId].ImagePath;
     titleInfotext.innerHTML = playlist[songId].SongName;
 })
+
+console.log(songId);
 
 songElement.addEventListener('ended', () => {
     document.getElementsByClassName('play')[songId].src = "black_play.jpg";
@@ -134,6 +139,7 @@ songElement.addEventListener('ended', () => {
     songElement.src = playlist[songId].SongPath;
     songElement.currentTime = 0;
     songElement.play();
+    songstatus = 1;
     document.getElementsByClassName('play')[songId].src = "black_pause.png";
     gif.style.opacity = 1;
     songplaying.src = playlist[songId].ImagePath;
