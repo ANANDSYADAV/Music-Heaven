@@ -7,7 +7,10 @@ let playlist = [
     { id: 5, SongName: "Bijlee Bijlee", SongPath: "Bijlee_Bijlee_song.mp3", ImagePath: "Bijlee_Bijlee.jpg", SongDuration: "02:48" },
     { id: 6, SongName: "Blue Eyes", SongPath: "Blue Eyes_song.mp3", ImagePath: "Blue-Eyes.jpg", SongDuration: "03:41" },
     { id: 7, SongName: "Lehanga", SongPath: "Lehenga_song.mp3", ImagePath: "lehenga.jpg", SongDuration: "03:30" },
-    { id: 8, SongName: "Tum Hi Ho", SongPath: "Tum Hi Ho_song.mp3", ImagePath: "tum hi ho.jpg", SongDuration: "04:22" }
+    { id: 8, SongName: "Tum Hi Ho", SongPath: "Tum Hi Ho_song.mp3", ImagePath: "tum hi ho.jpg", SongDuration: "04:22" },
+    { id: 9, SongName: "Ik Vaari", SongPath: "Ik_Vaari_song.mp3", ImagePath: "Ik-Vaari.jpg", SongDuration: "04:59" },
+    { id: 10, SongName: "Saadi Galli Aaja", SongPath: "Saadi Galli Aaja_song.mp3", ImagePath: "saadi galli aaja.jpg", SongDuration: "04:13" },
+    { id: 11, SongName: "Desi Kalakaar", SongPath: "Desi Kalakaar_song.mp3", ImagePath: "Desi-Kalakaar.jpg", SongDuration: "04:18" }
 ]
 
 let song = Array.from(document.getElementsByClassName('song'));
