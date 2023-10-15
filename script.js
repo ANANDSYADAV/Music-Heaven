@@ -95,7 +95,7 @@ let prevsong = document.getElementById('prevsong');
 prevsong.addEventListener('click', (e) => {
     document.getElementsByClassName('play')[songId].src = "black_play.jpg";
     if (songId == 0) {
-        songId = 0;
+        songId = playlist.length - 1;
     }
     else {
         songId--;
@@ -115,7 +115,7 @@ let nextsong = document.getElementById('nextsong');
 nextsong.addEventListener('click', (e) => {
     document.getElementsByClassName('play')[songId].src = "black_play.jpg";
     if (songId == playlist.length - 1) {
-        songId = playlist.length - 1;
+        songId = 0;
     }
     else {
         songId++;
